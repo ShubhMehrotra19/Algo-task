@@ -67,7 +67,7 @@ function ClosedState({
               <img className="h-3 w-4" src={isClicked ? down : up} alt="" />
             </div>
           </div>
-          <div className="p-1 mb-2 rounded-md border-2 border-[#99E4FF] bg-[#EFF5FF] text-xs text-black/80">
+          <div className="p-1 mb-2 rounded-md border-2 border-[#99E4FF] bg-[#EFF5FF] text-xs text-black/80 hover:scale-[102%] hover:bg-[#99E4FF] hover:text-white active:scale-95 transition-colors duration-300 ease-in-out">
             {completed}% Completed
           </div>
         </div>

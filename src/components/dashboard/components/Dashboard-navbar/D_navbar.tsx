@@ -34,10 +34,14 @@ function D_navbar() {
           <p className="text-sm">Learning Material</p>
         </div>
       </div>
-      <div className="border-2 border-[#99E4FF] rounded-md flex justify-center items-center p-[6px] gap-[6px] cursor-pointer text-black/70 hover:text-white hover:bg-[#99E4FF] hover:scale-[102%] active:scale-95 transition-colors duration-300 ease-in-out">
+      <a
+        href="https://github.com/ShubhMehrotra19/Algo-task"
+        target="_blank"
+        rel="noreferrer"
+        className="border-2 border-[#99E4FF] rounded-md flex justify-center items-center p-[6px] gap-[6px] cursor-pointer text-black/70 hover:text-white hover:bg-[#99E4FF] hover:scale-[102%] active:scale-95 transition-colors duration-300 ease-in-out">
         <img className="h-5 w-5" src={i} alt="" />
         <p className="text-sm font-semibold">How it works</p>
-      </div>
+      </a>
     </nav>
   );
 }

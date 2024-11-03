@@ -45,19 +45,35 @@ function D_content() {
         title: "Combined Resources",
       },
     ],
+    "Part 3": [
+      { icon: "/icons/dashboardIcons/video.svg", title: "Video 1" },
+      { icon: "/icons/dashboardIcons/video.svg", title: "Video 2" },
+      { icon: "/icons/dashboardIcons/video.svg", title: "Video 3" },
+      { icon: "/icons/dashboardIcons/question.svg", title: "Article 1" },
+      { icon: "/icons/dashboardIcons/question.svg", title: "Quiz 1" },
+      { icon: "/icons/dashboardIcons/coding.svg", title: "Coding Exercise" },
+      {
+        icon: "/icons/dashboardIcons/resources.svg",
+        title: "Combined Resources",
+      },
+    ],
   };
 
   return (
-    <main className="w-full flex flex-col justify-center items-center gap-3">
-      {values.map((value) => (
-        <ClosedState
-          key={value.index}
-          part={value.part}
-          subparts={value.subparts}
-          completed={value.completed}
-          openedItems={subpartDetails[value.part] || []}
-        />
-      ))}
+    <main
+      className="w-full h-[70%] overflow-x-hidden overflow-y-auto"
+      style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}>
+      <div className="w-full flex flex-col justify-start items-center gap-5">
+        {values.map((value) => (
+          <ClosedState
+            key={value.index}
+            part={value.part}
+            subparts={value.subparts}
+            completed={value.completed}
+            openedItems={subpartDetails[value.part] || []}
+          />
+        ))}
+      </div>
     </main>
   );
 }

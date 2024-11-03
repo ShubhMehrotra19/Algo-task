@@ -1,4 +1,6 @@
 import { useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import dashboard from "/icons/sidebarIcons/dashboard.svg";
 import learn from "/icons/sidebarIcons/learn.svg";
 import forums from "/icons/sidebarIcons/forums.svg";
@@ -7,7 +9,7 @@ import contest from "/icons/sidebarIcons/contest.svg";
 import leaderboard from "/icons/sidebarIcons/leaderboard.svg";
 import SideTab from "./components/sideTab";
 
-function Sidebar() {
+function Sidebar({ toHide }: { toHide: boolean }) {
   const [selectedTab, setSelectedTab] = useState(1);
 
   const tabValues = [
@@ -19,9 +21,29 @@ function Sidebar() {
     { index: 6, logo: leaderboard, title: "Leaderboard" },
   ];
 
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    if (toHide) {
+      tl.fromTo(
+        ".sidebar",
+        { x: 0, opacity: 1 },
+        { x: -500, opacity: 0, duration: 0.5, ease: "Power1.easeOut" }
+      );
+    } else {
+      tl.fromTo(
+        ".sidebar",
+        { x: -500, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5, ease: "Power1.easeOut" }
+      );
+    }
+  }, [toHide]);
+
   return (
-    <div className="w-full">
-      <div className="flex flex-col justify-center items-center gap-5 w-48 p-1">
+    <div className="sidebar w-full">
+      <div
+        className={`flex flex-col justify-center items-center gap-5 p-1 ${
+          toHide ? "w-0" : "w-48"
+        } transition-all duration-300 ease-in-out`}>
         {tabValues.map((tab) => (
           <SideTab
             key={tab.index}
