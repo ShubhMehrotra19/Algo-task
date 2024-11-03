@@ -10,7 +10,7 @@ function D_sideTab({ title, selected, onClick }: Props) {
   return (
     <div
       onClick={onClick}
-      className={`w-full cursor-pointer flex justify-start items-center gap-10 px-2 py-2 rounded-md 
+      className={`w-full cursor-pointer flex justify-start items-center gap-9 px-2 py-2 rounded-md 
         ${selected ? "bg-[#AAE8FF]" : "bg-transparent"} 
         hover:scale-[102%] hover:shadow-sm active:scale-95 transition-shadow duration-200 ease-in-out text-black/80`}>
       <p className={`text-base ${selected ? "font-semibold" : "font-normal"}`}>
