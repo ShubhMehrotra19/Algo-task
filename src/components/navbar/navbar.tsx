@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={`w-full mb-10 ${design.alignmentBetween}`}>
+    <nav className={`w-full px-2 mb-10 ${design.alignmentBetween}`}>
       <div className={design.alignmentCenter}>
         <img src={icons.menu} className="cursor-pointer" alt="menu" />
         <img style={{ paddingTop: "5px" }} src={icons.logo} alt="logo" />
