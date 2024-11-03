@@ -20,16 +20,18 @@ function Sidebar() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-5 w-48 p-1">
-      {tabValues.map((tab) => (
-        <SideTab
-          key={tab.index}
-          logo={tab.logo}
-          title={tab.title}
-          selected={selectedTab === tab.index}
-          onClick={() => setSelectedTab(tab.index)}
-        />
-      ))}
+    <div className="w-full">
+      <div className="flex flex-col justify-center items-center gap-5 w-48 p-1">
+        {tabValues.map((tab) => (
+          <SideTab
+            key={tab.index}
+            logo={tab.logo}
+            title={tab.title}
+            selected={selectedTab === tab.index}
+            onClick={() => setSelectedTab(tab.index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
