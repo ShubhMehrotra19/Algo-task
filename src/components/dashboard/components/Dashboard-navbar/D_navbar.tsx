@@ -11,7 +11,7 @@ function D_navbar() {
   }
 
   return (
-    <nav className="w-full flex justify-between items-center">
+    <nav className="w-full flex justify-between items-center mb-3">
       <div className="cursor-pointer flex justify-between items-center rounded-md gap-3 p-2 bg-gradient-to-b from-[#eff5ff] to-white">
         <div
           onClick={btnClicked}
