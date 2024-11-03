@@ -8,7 +8,7 @@ import leaderboard from "/icons/sidebarIcons/leaderboard.svg";
 import SideTab from "./components/sideTab";
 
 function Sidebar() {
-  const [selectedTab, setSelectedTab] = useState<number | null>(null);
+  const [selectedTab, setSelectedTab] = useState(1);
 
   const tabValues = [
     { index: 1, logo: dashboard, title: "Dashboard" },
