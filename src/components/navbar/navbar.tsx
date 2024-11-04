@@ -34,7 +34,7 @@ function Navbar({ isClicked, onClick }: NavbarProps) {
         {
           width: "200px",
           duration: 0.5,
-          ease: "power1.inOut",
+          ease: "power1.easeOut",
         }
       );
     } else {
@@ -45,8 +45,8 @@ function Navbar({ isClicked, onClick }: NavbarProps) {
         },
         {
           width: "32px",
-          duration: 0.5,
-          ease: "power1.inOut",
+          duration: 0.2,
+          ease: "power3.easeOut",
         }
       );
     }

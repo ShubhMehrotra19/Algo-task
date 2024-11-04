@@ -39,7 +39,7 @@ function ClosedState({
         className={`w-full rounded-md flex flex-col justify-center items-center cursor-pointer ${
           isClicked
             ? "border-t-[1px] border-r-[1px] border-l-[1px] border-[#99E4FF]"
-            : ""
+            : "border-[1px] border-[#99E4FF]"
         }`}>
         <div className="w-full pt-2 px-2 flex flex-col justify-center items-end text-[#17384D]">
           <div className={`w-full ${design.alignmentBetween}`}>
