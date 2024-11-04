@@ -5,7 +5,7 @@ import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
-  const [content, setContent] = useState(false);
+  const [content, setContent] = useState(true);
 
   const handleContentChange = (newContent: boolean) => {
     setContent(newContent);

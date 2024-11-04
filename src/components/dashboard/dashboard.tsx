@@ -1,7 +1,7 @@
 import D_content from "./components/Dashboard-content/D_content";
 import D_navbar from "./components/Dashboard-navbar/D_navbar";
 import D_sidebar from "./components/Dashboard-sidebar/D_sidebar";
-import lock from "/logo/lock.svg";
+import crane from "/logo/crane.png";
 
 function Dashboard({ content }: { content: boolean }) {
   return (
@@ -20,10 +20,9 @@ function Dashboard({ content }: { content: boolean }) {
         </div>
       ) : (
         <div className="h-[70%] bg-white flex flex-col justify-center items-center border-2 border-[#A4E6FF] p-5 rounded-md mt-[6px] mr-3 gap-3">
-          <img src={lock} alt="" />
+          <img src={crane} alt="" />
           <p className="text-sm text-semibold text-black/70 text-center ">
-            This content is locked. <br /> Please complete the previous parts to
-            unlock this content.
+            Page under construction.
           </p>
         </div>
       )}
