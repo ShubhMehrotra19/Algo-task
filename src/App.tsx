@@ -5,6 +5,11 @@ import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
+  const [content, setContent] = useState(false);
+
+  const handleContentChange = (newContent: boolean) => {
+    setContent(newContent);
+  };
 
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -32,10 +37,10 @@ function App() {
       />
       <div className="w-full flex justify-between items-start">
         <div className={isClicked ? "" : "w-[20%]"}>
-          <Sidebar toHide={isClicked} />
+          <Sidebar toHide={isClicked} onContentChange={handleContentChange} />
         </div>
         <div className={isClicked ? "w-full" : "w-[80%]"}>
-          <Dashboard />
+          <Dashboard content={content} />
         </div>
       </div>
     </main>
