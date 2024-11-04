@@ -9,8 +9,13 @@ import contest from "/icons/sidebarIcons/contest.svg";
 import leaderboard from "/icons/sidebarIcons/leaderboard.svg";
 import SideTab from "./components/sideTab";
 
-function Sidebar({ toHide }: { toHide: boolean }) {
-  const [selectedTab, setSelectedTab] = useState(1);
+interface SidebarProps {
+  toHide: boolean;
+  onContentChange: (content: boolean) => void;
+}
+
+function Sidebar({ toHide, onContentChange }: SidebarProps) {
+  const [selectedTab, setSelectedTab] = useState(4);
 
   const tabValues = [
     { index: 1, logo: dashboard, title: "Dashboard" },
@@ -50,7 +55,10 @@ function Sidebar({ toHide }: { toHide: boolean }) {
             logo={tab.logo}
             title={tab.title}
             selected={selectedTab === tab.index}
-            onClick={() => setSelectedTab(tab.index)}
+            onClick={() => {
+              setSelectedTab(tab.index);
+              onContentChange(tab.title === "Upskill"); // Update content based on the selected tab title
+            }}
           />
         ))}
       </div>
