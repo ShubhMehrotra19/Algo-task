@@ -162,8 +162,11 @@ state 2:
 
 ### Code Efficiency :
 
+`Example 1` <br />
 ![image](https://github.com/user-attachments/assets/4a3c194d-42e7-490c-8595-ceb49ddbcfe4)
 <br />
+
+`Example 2` <br />
 ![image](https://github.com/user-attachments/assets/4091c887-6738-4106-be9c-11306c030957)
 
 <br />
