@@ -179,7 +179,7 @@ I have also made an array of objects to have all the data for the UI. Later, thi
 ---
 ---
 
-## Deployment link : `https://algozenith-cms.vercel.app/`
+## `Deployment link` : https://algozenith-cms.vercel.app/
 
 
 
