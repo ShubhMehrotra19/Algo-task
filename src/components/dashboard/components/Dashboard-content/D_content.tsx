@@ -1,6 +1,11 @@
 import ClosedState from "./components/ClosedState";
+import lock from "/logo/lock.svg";
 
-function D_content({ content }: { content: boolean }) {
+interface props {
+  contentChange: boolean;
+}
+
+function D_content({ contentChange }: props) {
   const values = [
     {
       index: 1,
@@ -63,7 +68,7 @@ function D_content({ content }: { content: boolean }) {
     <main
       className="w-full h-[70%] overflow-x-hidden overflow-y-auto"
       style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}>
-      {content ? (
+      {contentChange ? (
         <div
           className={`w-full flex flex-col justify-start items-center gap-5`}>
           {values.map((value) => (
@@ -77,9 +82,14 @@ function D_content({ content }: { content: boolean }) {
           ))}
         </div>
       ) : (
-        <div
-          className={`w-full flex flex-col justify-center items-center gap-5`}>
-          <div className="flex flex-col justify-center items-center gap-2"></div>
+        <div className="w-full h-full flex flex-col justify-center items-center gap-5">
+          <div className="flex flex-col justify-center items-center gap-2">
+            <img src={lock} alt="" />
+            <p className="text-sm text-semibold text-black/70 text-center ">
+              This content is locked. <br /> Please complete the previous parts
+              to unlock this content.
+            </p>
+          </div>
         </div>
       )}
     </main>
