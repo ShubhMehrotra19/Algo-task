@@ -1,7 +1,11 @@
 import D_sideTab from "./D_sideTab";
 import { useState } from "react";
 
-function D_sidebar() {
+interface Props {
+  contentChange: (content: boolean) => void;
+}
+
+function D_sidebar({ contentChange }: Props) {
   const [selectedTab, setSelectedTab] = useState(1);
 
   const tabValues = [
@@ -20,7 +24,10 @@ function D_sidebar() {
             key={tab.index}
             title={tab.title}
             selected={selectedTab === tab.index}
-            onClick={() => setSelectedTab(tab.index)}
+            onClick={() => {
+              setSelectedTab(tab.index);
+              contentChange(tab.title === "Chapter 1");
+            }}
           />
         ))}
       </div>

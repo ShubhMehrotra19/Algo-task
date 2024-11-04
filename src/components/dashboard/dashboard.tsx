@@ -6,6 +6,11 @@ import crane from "/logo/crane.png";
 
 function Dashboard({ content }: { content: boolean }) {
   const [isLearningClicked, setIsLearningClicked] = useState(true);
+  const [contentChange, setContentChange] = useState(true);
+
+  const handleContentChange = (contentChange: boolean) => {
+    setContentChange(contentChange);
+  };
 
   return (
     <div className="h-screen">
@@ -20,10 +25,10 @@ function Dashboard({ content }: { content: boolean }) {
           {isLearningClicked ? (
             <div className="flex justify-center items-start gap-3 w-full">
               <div className="w-[30%]">
-                <D_sidebar />
+                <D_sidebar contentChange={handleContentChange} />
               </div>
               <div className="h-screen w-full">
-                <D_content content={content} />
+                <D_content contentChange={contentChange} />
               </div>
             </div>
           ) : (

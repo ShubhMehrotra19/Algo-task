@@ -20,6 +20,10 @@ function Navbar({ isClicked, onClick }: NavbarProps) {
     bell: "/icons/navbarIcons/bell.svg",
   };
 
+  const image = {
+    profile: "/images/profile.png",
+  };
+
   const [isBellClicked, setIsBellClicked] = useState(false);
 
   useGSAP(() => {
@@ -83,7 +87,13 @@ function Navbar({ isClicked, onClick }: NavbarProps) {
             No new messages
           </p>
         </div>
-        <div className="rounded-full cursor-pointer bg-gray-400 h-9 w-9"></div>
+        <div className="rounded-full cursor-pointer overflow-hidden bg-gray-400 h-9 w-9 object-contain">
+          <img
+            src={image.profile}
+            className="hover:scale-110 transition-all duration-300 ease-in-out"
+            alt=""
+          />
+        </div>
       </div>
     </nav>
   );
