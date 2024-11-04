@@ -57,7 +57,7 @@ function Sidebar({ toHide, onContentChange }: SidebarProps) {
             selected={selectedTab === tab.index}
             onClick={() => {
               setSelectedTab(tab.index);
-              onContentChange(tab.title === "Upskill"); // Update content based on the selected tab title
+              onContentChange(tab.title === "Upskill");
             }}
           />
         ))}
