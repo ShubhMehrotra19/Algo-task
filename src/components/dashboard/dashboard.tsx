@@ -5,19 +5,19 @@ import D_sidebar from "./components/Dashboard-sidebar/D_sidebar";
 import crane from "/logo/crane.png";
 
 function Dashboard({ content }: { content: boolean }) {
-  const [isMentorClicked, setIsMentorClicked] = useState(false);
+  const [isLearningClicked, setIsLearningClicked] = useState(true);
 
   return (
     <div className="h-screen">
       {content ? (
         <div className="h-[90%] bg-white flex flex-col justify-start items-stretch border-2 border-[#A4E6FF] p-5 rounded-md mt-[6px] mr-3">
           <D_navbar
-            mentorClicked={isMentorClicked}
-            setIsMentorClicked={() => {
-              setIsMentorClicked(!isMentorClicked);
+            learningClicked={isLearningClicked}
+            setIsLearningClicked={() => {
+              setIsLearningClicked(!isLearningClicked);
             }}
           />
-          {isMentorClicked ? (
+          {isLearningClicked ? (
             <div className="flex justify-center items-start gap-3 w-full">
               <div className="w-[30%]">
                 <D_sidebar />

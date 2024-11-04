@@ -4,23 +4,23 @@ import learning from "/icons/dashboardIcons/learning.svg";
 import i from "/icons/dashboardIcons/i_icon.svg";
 
 interface D_navbarProps {
-  mentorClicked: boolean;
-  setIsMentorClicked: (content: boolean) => void;
+  learningClicked: boolean;
+  setIsLearningClicked: (content: boolean) => void;
 }
 
-function D_navbar({ mentorClicked, setIsMentorClicked }: D_navbarProps) {
+function D_navbar({ learningClicked, setIsLearningClicked }: D_navbarProps) {
   const [isClicked, setIsClicked] = useState(false);
 
   function btnClicked() {
     setIsClicked(!isClicked);
-    setIsMentorClicked(mentorClicked);
+    setIsLearningClicked(learningClicked);
   }
 
   return (
     <nav className="w-full flex justify-between items-center mb-3">
       <div className="cursor-pointer flex justify-between items-center rounded-md gap-3 p-2 bg-gradient-to-b from-[#eff5ff] to-white">
         <div
-          onClick={btnClicked || mentorClicked}
+          onClick={btnClicked}
           className={`flex justify-center items-center p-[6px] rounded-md gap-[6px] ${
             isClicked
               ? "bg-white shadow-md border-2 border-gray-400 font-medium"
@@ -30,7 +30,7 @@ function D_navbar({ mentorClicked, setIsMentorClicked }: D_navbarProps) {
           <p className="text-sm">Mentor Sessions</p>
         </div>
         <div
-          onClick={btnClicked || !mentorClicked}
+          onClick={btnClicked}
           className={`flex justify-center items-center p-[6px] rounded-md gap-[6px] ${
             isClicked
               ? ""
