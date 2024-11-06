@@ -10,12 +10,7 @@ This project was created for the task round submission of Algozenith. The projec
 4. Coded in `React` and Deployed on `Vercel`.
 
 <br />
-<br />
-<br />
-<br />
 
-### Youtube Video Explanation
-https://www.youtube.com/watch?v=tvM1RLNF_MM
 ---
 ---
 ### Description of the project
@@ -187,6 +182,12 @@ I have also made an array of objects to have all the data for the UI. Later, thi
 ---
 
 ## `Deployment link` : https://algozenith-cms.vercel.app/
+
+<br />
+<br />
+
+### Youtube Video Explanation
+https://www.youtube.com/watch?v=tvM1RLNF_MM
 
 
 
