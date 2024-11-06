@@ -3,12 +3,19 @@
 
 This project was created for the task round submission of Algozenith. The project contains a CMS based UI Design that needed to be developed from scratch and deployed. 
 
-#### This project is : 
+### This project is : 
 1. Created with no component libraries. 
 2. Has easter egg animations for a better user interaction
 3. Uses animation library like GSAP to introduce smooth transformations
 4. Coded in `React` and Deployed on `Vercel`.
 
+<br />
+<br />
+<br />
+<br />
+
+### Youtube Video Explanation
+https://www.youtube.com/watch?v=tvM1RLNF_MM
 ---
 ---
 ### Description of the project
